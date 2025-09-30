@@ -11,6 +11,20 @@ namespace PasswordGenerator.Pages
         {
         }
 
+        public void OnPost()
+        {
+            if(!IncludeNumbers && !IncludeLowercase && !IncludeUppercase && !IncludeSpecial)
+            {
+                ErrorMessage = "Select at least one character type";
+                GeneratedPassword = string.Empty;
+                return;
+            }
+            GeneratedPassword = Generate();
+            ErrorMessage = string.Empty;
+        }
+
+        [BindProperty]
+        public string GeneratedPassword { get; set; }
         [BindProperty]
         public int PasswordSize { get; set; }
 
@@ -25,6 +39,8 @@ namespace PasswordGenerator.Pages
 
         [BindProperty]
         public bool IncludeSpecial { get; set; }
+        [TempData]
+        public string ErrorMessage { get; set; }
         public List<char> CharPool { get; set; } = new List<char>();
 
         public string Generate()

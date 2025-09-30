@@ -10,6 +10,11 @@ namespace PasswordGenerator
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+            app.MapGet("/", context =>
+            {
+                context.Response.Redirect("/Generator");
+                return Task.CompletedTask;
+            });
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
