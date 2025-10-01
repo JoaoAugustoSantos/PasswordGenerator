@@ -40,6 +40,15 @@ O projeto pode ser **executado diretamente no navegador**, sem necessidade de in
 
 ---
 
+## 📸 Demonstração
+### Tela inicial
+<img width="1243" height="611" alt="PasswordGenerator1" src="https://github.com/user-attachments/assets/ab258536-9460-4ff5-bd08-c4fc6f06123c" />
+
+### Senha gerada
+<img width="1243" height="611" alt="PasswordGenerator2" src="https://github.com/user-attachments/assets/51dd0f07-c5ed-4e24-a2a3-54f8ca6c76af" />
+
+---
+
 ## 🧩 Status do projeto
 ✅ Concluído e funcional  
 
